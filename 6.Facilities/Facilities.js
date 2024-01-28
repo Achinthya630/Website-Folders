@@ -1,9 +1,9 @@
 import { getComponent,displayComponent} from "../components.js";
-let comp = getComponent("header");
+let comp = getComponent("Header2");
 displayComponent("homepage-header",comp);
 
-comp = getComponent("Header-Navbar");
-displayComponent("homepage-navbar",comp);
+comp = getComponent("Footer");
+displayComponent("Footer",comp);
 
 
 // ----------------------------------------
