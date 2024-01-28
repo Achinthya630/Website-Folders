@@ -1,0 +1,63 @@
+html,
+body {
+/* position: relative; */
+height: 80000px;
+}
+
+body {
+background: #eee;
+font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+font-size: 14px;
+color: #000;
+margin: 30px;
+padding: 50px;
+}
+
+.swiper {
+width: 2000px;
+height: 1000px;
+margin: 30px;
+/* padding: 500px; */
+}
+
+
+.SliderContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.swiper-slide {
+text-align: center;
+font-size: 18px;
+background: #fff;
+display: flex;
+justify-content: center;
+align-items: center;
+/* height: 1000px;
+padding: 500px; */
+}
+
+/* .swiper-slide img {
+display: block;  
+width: 1000px;
+height: 1000px;
+object-fit: cover;
+padding: 500px;
+} */
+
+.PUCollegeSlider{
+    display: flex;
+    flex-direction: row;
+}
+
+.Primary,.HighSchool{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.Primary-school-image1{
+    margin-right: 20px;
+}
