@@ -1,3 +1,4 @@
+/* The COMMON CODE STARTS FROM HERE */
 
 body{
     background-color: #f0faff;
@@ -7,209 +8,9 @@ body{
     /* padding-bottom: 1000px; */
     display: flex;
     flex-direction: column;
-    
+    height: 1000px;
 }
 
-/* -------------------------------------------------- */
-
-.website-logo{
-    width: 100px;
-    padding-top:20px;
-}
-
-
-.homepage-header,.homepage-header-content{
-    
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;  
-    padding-bottom: 8px;
-    background-color:#8ECAE6 ;
-
-}
-
-.homepage-header-content{
-    /* position: fixed; */
-    /* margin-top: 120px; */
-    justify-content: space-between;
-    /* margin-left: 37%; */
-
-}
-
-.homepage-header{
-    /* position: fixed; */
-    /* margin-left: 45%; */
-    /* padding-left: 46%;
-    padding-right: 49%;
-    padding-bottom: 49px; */
-    background-color: #8ECAE6;
-    
-}
-
-.homepage-header-title{
-    font-size: 20px;
-    /* position: fixed; */
-}
-
-.homepage-navbar{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    /* position: fixed; */
-    /* margin-top: 150px;
-    width: 100%; */
-}
-
-.homepage-navbar-button{
-    width:100%;
-    color: #f0faff;
-    border:none;
-    height:40px;
-    background-color: rgb(2, 48, 71);
-    transition: background-color 0.15s;
-    cursor: pointer;
-    
-    
-}
-
-.homepage-navbar-button:hover{
-    
-    background-color: rgb(73,109,126);
-    transform: scale(1.03);
-    box-shadow: 0px 1px 2px black;
-}
-
-.homepage-navbar-button:active{
-    background-color: rgb(173,194,203);
-    transform: scale(0.98);
-
-}
-
-/* --------------------WEBPAGES HEADER IMAGE n TITLE------------------------ */
-
-.Title-Image{
-    width:100%;
-    filter: brightness(40%);
-}   
-
-.Title-Image-Container{
-    height: 200px;
-    overflow: hidden;
-    border-bottom: 10px solid #FFB703;
-
-}
-
-.Title-Text{
-    /* position: absolute; */
-    color: #f0faff;
-    font-size: 80px;
-    left: 38%;
-}
-
-.TitleAlign{
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    margin-top: 200px;
-    
-}
-
-/* --------------------------------------------- */
-
-.mainImgContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 40px;
-    /* width: 600px; */
-    object-fit:cover;
-    overflow: hidden;
-}
-
-.Image-Container{
-    width: 800px;
-    /* object-fit: fill; */
-}
-
-.InnerImage{
-    width: 100%;
-    height: 100%;
-    /* object-fit:cover; */
-    border-radius: 20px;
-    
-}
-
-.Card{
-    width: 100%;
-    overflow: hidden;
-    position: relative;    
-    border-radius: 20px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    
-    /* transition: transform 1.8s;*/
-
-    transition-property: margin, transform ;
-    transition-duration: 1s;
-}
-
-
-.Card-Body{
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: -100%;
-    background-color: #023047a9;
-    /* background-color: white; */
-    backdrop-filter: blur(5px);
-    /* margin-top: 10px; */
-    position: absolute;
-    overflow: hidden;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    color: #f0faff;
-    transition: 1s;
-    
-}
-
-.Card:hover .Card-Body{
-    right:0;
-    
-}
-
-.Card:hover{
-    transform: scale(1.11);
-    margin-top: 80px;
-    margin-bottom: 80px;
-    /* transition:  1.8s; */
-}
-.Card:active .Card-Body{
-    right:0;
-}
-
-
-
-.Card-Content{
-    color: #f0faff;
-    font-size: 20px;
-    margin: 30px;
-    text-align: justify;
-    margin-top: 10px;
-    margin-bottom: 40px;
-}
-
-.Card-Content-Title{
-    font-size: 50px;
-    margin: 30px;
-    margin-bottom: 10px;
-}
-
-
-/* The COMMON CODE STARTS FROM HERE */
 /* ------------------------Header 2 Styling-------------------- */
 
   
@@ -516,3 +317,271 @@ body{
     height: 150px;
     justify-content: space-around;
 }
+
+
+/* The page specific code starts here */
+
+.overview{
+
+
+
+}
+.overviewheading{
+    font-size: 28px;
+}
+
+.pucollegeheading{
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.pucollegepara{
+   margin-bottom: 25px;
+   margin-left: 10px;
+}
+.schoolheading{
+
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.schoolpara{
+    margin-left: 10px;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1.5em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+.college_ttheading{
+    font-weight: bold;
+    margin-left: 20px;
+}
+.highschool_ttheading{
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 10px;  
+    margin-top: 100px;
+    margin-left: 20px;
+}
+.highschool_ttpara{
+    margin-left: 20px;
+ 
+}
+.highschooltimetable-logo{
+    width: 450px;
+    padding-top: 20px;
+    margin-left: 405px;
+    margin-right: 150px;
+    height: 500px;
+    margin-top: -50px;
+}
+.college_tt {
+    flex: 1; /* Take up remaining space */
+    margin-left: 20px; /* Add some spacing between the left and right sides */
+}
+.collegetimetable-logo{
+    width: 600px;
+    margin-right: 50px;
+}
+.college_ttpara{
+    padding-top: 25px;
+    margin-left: 20px;
+
+}
+.primaryheading{
+    
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 10px;  
+    margin-top: 100px;
+    margin-left: 20px;
+}
+.primaryschooltimetable-logo{
+    width: 450px;
+    padding-top: 20px;
+    margin-left: 405px;
+    margin-right: 150px;
+    height: 500px;
+    margin-top: 10px;
+}
+/* Add the fade-in animation to elements with the 'fade-in' class */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn ease-in-out 1;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Apply the 'fade-in' class to elements you want to animate */
+.overview,
+.ttheading,
+.college_ttheading,
+.highschool_ttheading,
+.primaryheading,
+.scholarship,
+.footer {
+    animation-delay: 0.5s;
+}
+
+.ttheading,
+.college_ttheading,
+.highschool_ttheading,
+.primaryheading,
+.scholarship h2 {
+    font-size: 24px; /* Adjusted font size */
+}
+
+.pucollegeheading,
+.schoolheading,
+.college_ttheading,
+.highschool_ttheading,
+.primaryheading,
+.scholarshipheading {
+    font-size: 28px;
+    color: #333;
+}
+
+.pucollegepara,
+.schoolpara,
+.college_ttpara,
+.highschool_ttpara,
+.primary_tt p,
+.scholarshipp {
+    font-size: 18px; /* Adjusted font size */
+    line-height: 1.6; /* Improved readability */
+}
+.ttheading{
+    margin-left: 20px;
+    font-size: 28px;
+}
+.scholarshipheading{
+    margin-left: 20px;
+    font-size: 48px;
+}
+.scholarpara{
+    margin-left: 20px;
+    font-size: 16px;
+}
+.hereline{
+    margin-left:20px ;
+    font-size: 16px;
+}
+.ssp{
+    margin-left: 20px;
+    font-size: 18px;
+}
+.nsp{
+    margin-left: 20px;
+    font-size: 18px;
+}
+.lcs{
+    margin-left: 20px;
+    font-size: 18px;
+}
+.panchayat{
+    margin-left: 20px;
+    font-size: 18px;
+}
+.mla{
+    margin-left: 20px;
+    font-size: 18px;
+}
+.primarypara{
+    margin-left: 20px;
+    font-size:14px ;
+    text-align: justify;
+
+}
+
+/* -------------------------- */
+
+.Title-Image{
+    width:100%;
+    filter: brightness(40%);
+}   
+
+.Title-Image-Container{
+    height: 200px;
+    overflow: hidden;
+    border-bottom: 10px solid #FB8500;
+
+}
+
+.Title-Text{
+    /* position: absolute; */
+    color: #f0faff;
+    font-size: 80px;
+    left: 38%;
+    font-family: 'Verdana', sans-serif; /* Change font family */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.TitleAlign{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-top: -150px;
+}
+
+
+/* ------------------------- */
+/* ... (your existing code) */
+
+/* Styling for Timetable Section */
+.timetable-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/* Styling for Timetable Cards */
+.timetable-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    overflow: hidden;
+    max-width: 600px;
+    width: 100%;
+}
+
+.timetable-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.timetable-card h3 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.timetable-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* ... (your existing code) */

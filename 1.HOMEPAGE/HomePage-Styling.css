@@ -118,6 +118,7 @@ body{
     /* width: 350px; */
     margin: 45px;
     background: #FFB703;
+    /* background-color: #023047; */
     height: 800px;
     border-radius: 10px;
 }
@@ -442,6 +443,11 @@ body{
 
 .Header-Logo-Img{
   width: 120px;
+  transition: transform 0.5s;
+}
+
+.Header-Logo-Img:hover{
+  transform: scale(1.2);
 }
 
 .Header-Right{
