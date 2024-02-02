@@ -1,63 +1,576 @@
-html,
-body {
-/* position: relative; */
-height: 80000px;
+/* The COMMON CODE STARTS FROM HERE */
+
+body{
+    background-color: #f0faff;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    /* padding-bottom: 1000px; */
+    display: flex;
+    flex-direction: column;
+    height: 1000px;
+    
 }
 
-body {
-background: #eee;
-font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-font-size: 14px;
-color: #000;
-margin: 30px;
-padding: 50px;
-}
+/* ------------------------Header 2 Styling-------------------- */
 
-.swiper {
-width: 2000px;
-height: 1000px;
-margin: 30px;
-/* padding: 500px; */
-}
+  
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-top: 10px;
+    margin-left: 50px;
+    margin-right: 50px; */
+    background-color:#023047;
+    color:aliceblue;
+    height: 150px;
+    border-bottom: 10px solid #FB8500;
+  }
+  
+  .Header-Logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    flex: 2;
+    margin-left: 50px;
+    /* height: 160px; */
+    cursor: pointer;
+  }
+  
+  .Header-Logo-Img{
+    width: 120px;
+    transition: transform 0.5s;
+  }
 
-
-.SliderContent{
+  .Header-Logo-Img:hover{
+    transform: scale(1.2);
+  }
+  
+  .Header-Right{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
+    flex: 1;
+    margin-right:20px;
+  }
+  
+  .Header-content{
+    margin: 30px;
+    font-size: 16px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .Header-content::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: 0.3s;
+  }
+  
+  .Header-content:hover::before{
     width: 100%;
+    transform: scale(1.03);
+    
+  }
+  
+  .Header-Title{
+    margin-left: 10px;
+    font-size: 20px;
+  }
+  
+  /* -------------- */
+  
+  
+  ul li{
+    list-style:none;
+    margin:0 20px;
+    transition:0.5s;
+  }
+  
+  ul li a{
+    display: block;
+    position:relative;
+    text-decoration:none;
+    padding:5px;
+    font-size:15px;
+    font-family: sans-serif;
+    color:#fff;
+    text-transform:uppercase;
+    transition:0.5s;
+  }
+  
+  ul:hover li a{
+    transform:scale(1.5);
+    opacity:0.2;
+    filter:blur(5px);
+  }
+  
+  ul li a:hover{
+    transform:scale(1.5);
+    opacity:1;
+    filter:blur(0);
+    text-decoration:none;
+    color:#fff;
+  }
+  
+  ul li a:before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#FB8500;
+    transition:0.5s;
+    transform-origin:right;
+    transform:scaleX(0);
+    z-index:-1;
+  }
+  
+  ul li a:hover:before{
+    transition:transform 0.5s;
+    transform-origin:left;
+    transform:scaleX(1);
+  }
+
+  /* Footer Styling */
+
+  
+.footer {
+    position: relative;
+    width: 94.05%;
+    background: #3586ff;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  
+  .social-icon,
+  .menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+  }
+  
+  .social-icon__item,
+  .menu__item {
+    list-style: none;
+  }
+  
+  .social-icon__link {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+  }
+  .social-icon__link:hover {
+    transform: translateY(-10px);
+  }
+  
+  .menu__link {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
+    font-weight: 300;
+  }
+  
+  .menu__link:hover {
+    opacity: 1;
+  }
+  
+  .footer p {
+    color: #fff;
+    margin: 15px 0 10px 0;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  
+  .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("https://i.ibb.co/wQZVxxk/wave.png");
+    background-size: 1000px 100px;
+  }
+  
+  .wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWaves 4s linear infinite;
+  }
+  
+  .wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animate 4s linear infinite !important;
+  }
+  
+  .wave#wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWaves 3s linear infinite;
+  }
+  
+  .wave#wave4 {
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animate 3s linear infinite;
+  }
+  
+  @keyframes animateWaves {
+    0% {
+      background-position-x: 1000px;
+    }
+    100% {
+      background-positon-x: 0px;
+    }
+  }
+  
+  @keyframes animate {
+    0% {
+      background-position-x: -1000px;
+    }
+    100% {
+      background-positon-x: 0px;
+    }
+  }
+
+  .footer2{
+    /* position:absolute; */
+    display:flex;
+    flex-direction: column;
+    /* justify-content: ; */
+    align-items: center;
+    background-color: black;
+    color:#f0faff;
+    height: 400px;
+  }
+  
+  .Footer-Left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* flex: 1; */
+  }
+
+  
+
+.Contacts{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    /* flex: 2; */
+    align-items:center;
+
+
+}
+.CallIcon{
+    /* padding-right: 40px; */
+    padding-top: 8px;
 }
 
-.swiper-slide {
-text-align: center;
-font-size: 18px;
-background: #fff;
-display: flex;
-justify-content: center;
-align-items: center;
-/* height: 1000px;
-padding: 500px; */
+.contactUs{
+    font-size: 25px;
+    padding-bottom: 10px;
 }
 
-/* .swiper-slide img {
-display: block;  
-width: 1000px;
-height: 1000px;
-object-fit: cover;
-padding: 500px;
-} */
 
-.PUCollegeSlider{
+.ContactInfo{
     display: flex;
     flex-direction: row;
+    margin-top: 2px;
+    justify-content: space-around;
+    width: 40%;
 }
 
-.Primary,.HighSchool{
+.ContactInfoType{
+    display:flex;
+    flex-direction: column;
+    padding: 20px;
+    height: 150px;
+    justify-content: space-around;
+}
+
+/* Add the fade-in animation to elements with the 'fade-in' class */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn ease-in-out 1;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* BACKGROUND SCROLL */
+
+/* Background Infinite Scroll */
+
+
+/* Cool infinite background scrolling animation.
+ * Twitter: @kootoopas
+ */
+/* Exo thin font from Google. */
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+/* Main styles */
+body {
+  /* margin-top: 13.5rem; */
+  /* color: #FB8500; */
+  /* font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif; */
+  /* text-align: center; */
+  /* img size is 50x50 */
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+  -webkit-animation: bg-scrolling-reverse 5.52s infinite;
+  /* Safari 4+ */
+  -moz-animation: bg-scrolling-reverse 5.52s infinite;
+  /* Fx 5+ */
+  -o-animation: bg-scrolling-reverse 5.52s infinite;
+  /* Opera 12+ */
+  animation: bg-scrolling-reverse 5.52s infinite;
+  /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+/* body::before {
+  content: "INFINITY";
+  font-size: 8rem;
+  font-weight: 100;
+  font-style: normal;
+} */
+
+/* //////////////////////////////////////////////////////////////////////// */
+
+/* -------------------------- */
+.Title-Image{
+    width:100%;
+    filter: brightness(40%);
+    /* position: absolute; */
+}   
+
+.Title-Image-Container{
+    height: 200px;
+    overflow: hidden;
+    border-bottom: 10px solid #FFB703;
+    /* position: relative; */
+}
+
+.Title-Text{
+    /* position: absolute; */
+    color: #f0faff;
+    font-size: 80px;
+    left: 38%;
+}
+
+.TitleAlign{
+    position: absolute;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    width: 100%;
+    margin-top: -180px;
+    
 }
 
-.Primary-school-image1{
-    margin-right: 20px;
+.Title-Container{
+    height: 200px;
+    position: relative;
 }
+
+
+
+
+/* PAGE SPECIFIC CODE STARTS HERE */
+
+
+::-webkit-scrollbar {
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 25px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #6e93f7;
+    border-radius: 25px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #4070f4;
+  }
+  .container {
+    display: flex;
+    gap: 12px;
+    max-width: 1300px;
+    width: 100%;
+    background: #4070f4;
+    border-radius: 12px;
+    padding: 30px;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    scroll-padding: 30px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .container .card {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: center;
+    padding: 13px;
+    border-radius: 12px;
+    background: #fff;
+    scroll-snap-align: start;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  }
+  .card .image {
+    height: 150px;
+    width: 150px;
+    /* padding: 20px; */
+    background: #4070f4;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .image img {
+    height: 90%;
+    width: 90%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    object-position:center;
+    
+  }
+  .card h2 {
+    margin-top: 25px;
+    color: #333;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+  }
+  .card p {
+    margin-top: 4px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #333;
+    display: flex;
+    /* justify-content: center; */
+    text-align: center;
+  }
+  
+  .card.inactive {
+    display: none;
+  }
+  
+  .card {
+    width: 500px;
+  }
+  
+  .mainhead {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .content {
+    margin-left: 40px;
+    margin-right: 40px;
+    display: flex;
+    text-align: justify;
+    font-size: 20px;
+  }
+  
+  .facu {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    text-transform: uppercase;
+  }
+  
+  .courses {
+    display: flex;
+    font-size: 25px;
+    margin-left: 40px;
+    font-weight:600;
+    justify-content: center;
+  }
+  
+  .cont {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+  }

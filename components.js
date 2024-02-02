@@ -45,12 +45,12 @@ let componentsJSON =
                     <div class = "Header-content">FACILITIES</div>
                     <div class = "Header-content">GALLERY</div> -->
                     <ul class = "Header-Right">
-                        <li><a href="#">ABOUT</a></li>
-                        <li><a href="#">ADMISSION</a></li>
-                        <li><a href="#">ACADEMICS</a></li>
-                        <li><a href="#">DEPARTMENTS</a></li>
+                        <li><a href = "/2.ABOUT PAGE/AboutPage.html">ABOUT</a></li>
+                        <li><a href = "#">ADMISSION</a></li>
+                        <li><a href = "/4.Academics/Academics.html">ACADEMICS</a></li>
+                        <li><a href = "/5.Department/Department.html">DEPARTMENTS</a></li>
                         <li><a href = "/6.Facilities/Facilities.html">FACILITIES</a></li>
-                        <li><a href="#">GALLERY</a></li>
+                        <li><a href = "/7.GALLERY/Gallery.html">GALLERY</a></li>
                     </ul>
                 </div>
             </div>`,

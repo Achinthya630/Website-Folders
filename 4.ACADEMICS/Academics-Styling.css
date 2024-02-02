@@ -318,24 +318,34 @@ body{
     justify-content: space-around;
 }
 
+/* Add the fade-in animation to elements with the 'fade-in' class */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn ease-in-out 1;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
 
 /* The page specific code starts here */
 
-.overview{
-
-
-
-}
-.overviewheading{
+/* .overvi  */
+/* .overviewheading{
     font-size: 28px;
-}
+} */
 
-.pucollegeheading{
+/* .pucollegeheading{
     font-weight: bold;
     font-size: 15px;
     margin-bottom: 10px;
     margin-left: 10px;
-}
+} */
 
 .pucollegepara{
    margin-bottom: 25px;
@@ -415,18 +425,6 @@ footer {
     height: 500px;
     margin-top: 10px;
 }
-/* Add the fade-in animation to elements with the 'fade-in' class */
-.fade-in {
-    opacity: 0;
-    animation: fadeIn ease-in-out 1;
-    animation-fill-mode: forwards;
-    animation-duration: 1s;
-}
-
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
 
 /* Apply the 'fade-in' class to elements you want to animate */
 .overview,
@@ -454,7 +452,8 @@ footer {
 .primaryheading,
 .scholarshipheading {
     font-size: 28px;
-    color: #333;
+    /* color: #333; */
+    text-transform: uppercase;
 }
 
 .pucollegepara,
@@ -470,57 +469,19 @@ footer {
     margin-left: 20px;
     font-size: 28px;
 }
-.scholarshipheading{
-    margin-left: 20px;
-    font-size: 48px;
-}
-.scholarpara{
-    margin-left: 20px;
-    font-size: 16px;
-}
-.hereline{
-    margin-left:20px ;
-    font-size: 16px;
-}
-.ssp{
-    margin-left: 20px;
-    font-size: 18px;
-}
-.nsp{
-    margin-left: 20px;
-    font-size: 18px;
-}
-.lcs{
-    margin-left: 20px;
-    font-size: 18px;
-}
-.panchayat{
-    margin-left: 20px;
-    font-size: 18px;
-}
-.mla{
-    margin-left: 20px;
-    font-size: 18px;
-}
-.primarypara{
-    margin-left: 20px;
-    font-size:14px ;
-    text-align: justify;
-
-}
 
 /* -------------------------- */
-
 .Title-Image{
     width:100%;
     filter: brightness(40%);
+    /* position: absolute; */
 }   
 
 .Title-Image-Container{
     height: 200px;
     overflow: hidden;
-    border-bottom: 10px solid #FB8500;
-
+    border-bottom: 10px solid #FFB703;
+    /* position: relative; */
 }
 
 .Title-Text{
@@ -528,8 +489,6 @@ footer {
     color: #f0faff;
     font-size: 80px;
     left: 38%;
-    font-family: 'Verdana', sans-serif; /* Change font family */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .TitleAlign{
@@ -538,7 +497,13 @@ footer {
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    margin-top: -150px;
+    margin-top: -180px;
+    
+}
+
+.Title-Container{
+    height: 200px;
+    position: relative;
 }
 
 
@@ -550,19 +515,67 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 30px;
+    margin: 30px;
 }
 
 /* Styling for Timetable Cards */
+
+
+/* ... (your existing code) */
+
+
+
+.index{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-decoration: none;
+    margin-top: 40px;
+    margin: 80px;
+}
+
+.IndexText{
+    text-decoration: none;
+    color: #FB8500;
+    font-size: 18px;
+    border: 5px solid #FB8500;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.Acad-Sub-heading{
+    font-size: 40px;
+    margin-left: 40px;
+    text-transform: uppercase;
+}
+
+.overviewContent{
+    /* margin: 20px; */
+    text-align: justify;
+    width: 90%;
+}
+
+.overviewSubheading{
+    margin-left: 40px;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 10px;
+    /* margin-left: 10px; */
+}
+
 .timetable-card {
-    background-color: #fff;
+    background-color: #023047;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 20px;
     overflow: hidden;
-    max-width: 600px;
-    width: 100%;
+    /* max-width: 600px; */
+    width: 80%;
+    color: white;
+    /* text-transform: uppercase; */
 }
+
 
 .timetable-content {
     display: flex;
@@ -573,7 +586,7 @@ footer {
 }
 
 .timetable-card h3 {
-    color: #333;
+    /* color: #333; */
     font-size: 24px;
     margin-bottom: 10px;
 }
@@ -584,4 +597,140 @@ footer {
     margin-top: 10px;
 }
 
-/* ... (your existing code) */
+
+.TimeTableHeading{
+    font-size: 40px;
+}
+
+.scholarpara, .hereline{
+    margin-left: 40px;
+    font-size: 20px;
+    text-align: justify;
+    width: 90%;
+}
+
+.ssp, 
+.nsp,
+.lcs,
+.panchayat,
+.mla{
+    /* margin-left: 40px; */
+    font-size: 18px;
+    padding: 20px;
+    background-color: #fb8600;
+    height: 600px;
+    transition: box-shadow 0.5s;
+}
+
+.primarypara{
+    margin-left: 20px;
+    font-size:14px ;
+    text-align: justify;
+
+}
+.space{
+    margin-top: 100px;
+}
+
+.gridBox{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-row-gap: 30px;
+    grid-column-gap: 30px;
+    margin: 30px;
+    /* height: 400px; */
+}
+
+.ssp:hover, 
+.nsp:hover,
+.lcs:hover,
+.panchayat:hover,
+.mla:hover{
+    box-shadow: 0px 0px 25px black;
+}
+
+.opportunities{
+    font-size: 30px;
+    margin: 20px;
+    margin-top: 10px;
+}
+
+/* BACKGROUND SCROLL */
+
+/* Background Infinite Scroll */
+
+
+/* Cool infinite background scrolling animation.
+ * Twitter: @kootoopas
+ */
+/* Exo thin font from Google. */
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+/* Main styles */
+body {
+  /* margin-top: 13.5rem; */
+  /* color: #FB8500; */
+  font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+  /* text-align: center; */
+  /* img size is 50x50 */
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+  -webkit-animation: bg-scrolling-reverse 5.52s infinite;
+  /* Safari 4+ */
+  -moz-animation: bg-scrolling-reverse 5.52s infinite;
+  /* Fx 5+ */
+  -o-animation: bg-scrolling-reverse 5.52s infinite;
+  /* Opera 12+ */
+  animation: bg-scrolling-reverse 5.52s infinite;
+  /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+body::before {
+  /* content: "INFINITY"; */
+  font-size: 8rem;
+  font-weight: 100;
+  font-style: normal;
+}
