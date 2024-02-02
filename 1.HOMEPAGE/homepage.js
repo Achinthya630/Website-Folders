@@ -50,3 +50,25 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+// ------------------ COUNTER ------------------
+
+const counts = document.querySelectorAll(".count");
+const speed = 10.5;
+
+counts.forEach((counter) => {
+  function upDate() {
+    const target = Number(counter.getAttribute("data-target"));
+    const count = Number(counter.innerText);
+    const inc = target / speed;
+    if (count < target) {
+      counter.innerText = Math.floor(inc + count);
+      setTimeout(upDate, 15);
+    } else {
+      counter.innerText = target;
+    }
+  }
+  upDate();
+});
+
+// ----------------------------------------------------
