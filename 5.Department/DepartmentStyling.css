@@ -455,27 +455,27 @@ body {
 
 /* PAGE SPECIFIC CODE STARTS HERE */
 
-
+/* 
 ::-webkit-scrollbar {
     height: 8px;
-  }
-  ::-webkit-scrollbar-track {
+  } */
+  /* ::-webkit-scrollbar-track {
     background: #f1f1f1;
     border-radius: 25px;
-  }
-  ::-webkit-scrollbar-thumb {
+  } */
+  /* ::-webkit-scrollbar-thumb {
     background: #6e93f7;
     border-radius: 25px;
-  }
+  } */
   ::-webkit-scrollbar-thumb:hover {
-    background: #4070f4;
+    background: #023047;
   }
   .container {
     display: flex;
     gap: 12px;
     max-width: 1300px;
     width: 100%;
-    background: #4070f4;
+    background: #023047;
     border-radius: 12px;
     padding: 30px;
     scroll-snap-type: x mandatory;
@@ -499,7 +499,7 @@ body {
     height: 150px;
     width: 150px;
     /* padding: 20px; */
-    background: #4070f4;
+    background: #023047;
     border-radius: 50%;
     display: flex;
     justify-content: center;

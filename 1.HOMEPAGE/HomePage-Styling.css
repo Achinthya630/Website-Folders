@@ -126,10 +126,18 @@ body{
 .Primary-School-Title{
     font-size: 40px;
     width: 500px;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
     text-align:start;
     padding-left: 60px;
-    padding-top: 100px;
+    padding-top: 10px;
+}
+
+.Primary-School-Title-Kannada{
+  text-align: left;
+  font-size: 40px;
+  margin-top: 30px;
+  margin-left: 60px;
+  /* font-size: bold; */
 }
 
 .Primary-school-content{
@@ -232,6 +240,7 @@ body{
 
 .Vision-Content{
     font-size: 25px;
+    text-align: center;
 }
 
 /* ----Footer Styling------------ */
@@ -633,4 +642,22 @@ body::before {
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
+}
+
+.VisMisContainer{
+  /* width: 1300px; */
+  display: flex;
+  justify-content: center;
+}
+
+.VisMisContent{
+  width: 1300px;
+}
+
+.PU-College-image1{
+  margin-top: 50px;
+}
+
+.Primary-school-image1{
+  margin-top: 50px;
 }
